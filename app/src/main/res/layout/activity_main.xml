@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONVERSION APP"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_selection_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginStart="@dimen/dp_16"
+        android:gravity="center"
+        android:text="This is a conversion program that does a two way -  unit measurement conversion"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_selection_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select a conversion unit below"
+        android:layout_marginTop="32dp"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selection_subtitle"
+        />
+
+    <Spinner
+        android:id="@+id/sp_units"
+        app:layout_constraintTop_toBottomOf="@+id/tv_selection_hint"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_height="@dimen/custom_height" />
+
+    <ImageView
+        android:id="@+id/iv_maturity2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sp_units"
+        app:layout_constraintEnd_toEndOf="@+id/sp_units"
+        app:layout_constraintTop_toTopOf="@id/sp_units"
+        app:srcCompat="@drawable/ic_drop_down_6" />
+
+
+    <TextView
+        android:id="@+id/tv_conversion_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input a conversion value below"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_units"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tl_conversion_value"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custom_height"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:boxStrokeWidth="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_conversion_hint" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_text_background"
+            android:layout_height="@dimen/custom_height"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/tv_result_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:layout_marginTop="@dimen/dp_16"
+        android:textSize="@dimen/sp_14"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_conversion_value"
+        />
+
+    <TextView
+        android:id="@+id/tv_result_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textSize="@dimen/sp_22"
+        android:layout_marginStart="@dimen/dp_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result_hint"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
