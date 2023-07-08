@@ -10,6 +10,7 @@ import com.example.conversionapp.R
 import com.example.conversionapp.data.MeasurementType
 import java.util.*
 
+//Spinner Adapter
 
 class MySpinnerAdapter (ctx: Context,
                         list: Array<MeasurementType>) :

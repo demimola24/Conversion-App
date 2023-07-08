@@ -1,18 +1,16 @@
 package com.example.conversionapp.data
 
 enum class MeasurementType(val conversionConstant: Double, val conversionUnit: String) {
-    KM(0.62, "mi"),
-    MI(1.61, "km"),
-    CM(0.39, "in"),
-    IN(2.54, "cm"),
-    KG(2.2, "lb"),
-    LB(0.45, "kg"),
-    G(0.04, "oz"),
-    OZ(28.35, "g"),
-    L(4.17, "cups"),
-    CUPS(0.24, "L"),
-    FT(0.33, "yards"),
-    YARDS(0.9144, "ft"),
+    KILOMETER(0.62, "Miles"),
+    MILES(1.61, "Kilometers"),
+    CENTIMETER(0.39, "Inches"),
+    INCHES(2.54, "Centimeters"),
+    KILOGRAM(2.2, "Pounds"),
+    POUNDS(0.45, "Kilograms"),
+    GRAM(0.04, "Ounces"),
+    OUNCE(28.35, "Grams"),
+    LITRE(4.17, "Cups"),
+    CUPS(0.24, "Litres"),
+    FEET(0.33, "Yards"),
+    YARD(0.9144, "Feet"),
 }
-
-fun stringToMeasurementType(name: String): MeasurementType = MeasurementType.valueOf(name.uppercase())
